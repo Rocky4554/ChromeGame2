@@ -1,0 +1,152 @@
+.{
+    margin:0;
+    padding:0;
+}
+body{
+    overflow: hidden;
+}
+    #gamecontainer{
+    background-image:url(backgroungnew.jpg);
+    background-repeat:no-repeat;
+    background-size: 100vw 100vh;
+    width:100%;
+    height:100vh;
+
+}
+#dino{
+    background-image: url(dino.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:333px;
+    height:133px;
+    position:absolute;
+    bottom:0px;
+    left:83px;
+    /* animation:dino 1s linear infinite; */
+}
+    #gameover{
+        display: flex;
+        justify-content: center;
+        /* align-content: center; */
+        align-items: center;
+        top: 6vh;
+        position: relative;
+        font-size: 14vw;
+        /* border: 2px solid rgb(248, 244, 244); */
+        color: red;
+        background: black;
+    
+    /* border: 2px solid chartreuse; */
+}
+
+    .animate{
+    animation:dinomotion 1s;
+    }
+    .enemymotion{
+        animation: enemy 5s linear infinite;
+    }
+.enemy{
+    background-image: url(kongnew.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:152px;
+    height:225px;
+    position:absolute;
+    bottom: 0;
+    left:80vw;
+    /* animation: enemy 3s linear infinite; */
+    
+}
+#score{
+    color: #fdfcfa;
+    font-size: 5vw;
+    /* bottom: 45vh; */
+    margin: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 56vh;
+    left: 30vw;
+    position: absolute;
+    color:black;
+    font-weight: bolder;
+
+}
+#title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17pvw;
+    font-size: 8vw;
+    font-weight: bolder;
+    font-style: revert;
+    background: orange;
+    border: 2px solid orangered
+}
+@keyframes dinomotion {
+    0%{
+        bottom:0;}
+    50%{
+        bottom:350px;
+    }
+    /* 75%{
+        bottom:400px;
+    }
+    85%{
+        bottom:250px;
+    } */
+    100%{
+        bottom:0px;
+    }
+}
+@keyframes enemy {
+    0%{
+        left:80vw;
+    }
+ 
+    100%{
+        left:-10vw;
+    }
+}
+ @media only screen and (max-width:760px){
+    #dino{
+        width:102px;
+        height: 44px;
+        left:12px;
+    }
+    .enemy{
+        width: 51px;
+        height: 78px;
+        left:79vw;
+    }
+    #gameover{
+        top:32vh;
+        font-size: 21vw;
+
+    }@keyframes dinomotion {
+        0%{
+            bottom:0;}
+        50%{
+            bottom:200px;
+        }
+        /* 75%{
+            bottom:400px;
+        }
+        85%{
+            bottom:250px;
+        } */
+        100%{
+            bottom:0px;
+        }
+    }
+    @keyframes enemy {
+        0%{
+            left:80vw;
+        }
+    
+        100%{
+            left:-10vw;
+        }
+    }
+
+} 
